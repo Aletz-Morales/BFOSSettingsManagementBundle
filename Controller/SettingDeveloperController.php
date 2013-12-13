@@ -34,7 +34,7 @@ class SettingDeveloperController extends Controller
             return new Response('', 403);
         }
 
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('BFOSSettingsManagementBundle:Setting')->find($id);
         if (!$entity) {
@@ -70,7 +70,7 @@ class SettingDeveloperController extends Controller
         if(!$request->isXmlHttpRequest()){
             throw $this->createNotFoundException('Invalid request');
         }
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('BFOSSettingsManagementBundle:Setting')->find($id);
         $entities = $em->getRepository('BFOSSettingsManagementBundle:Setting')->findAll();
@@ -135,7 +135,7 @@ class SettingDeveloperController extends Controller
         $form->bind($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $entity = $em->getRepository('BFOSSettingsManagementBundle:Setting')->find($id);
 
             if (!$entity) {

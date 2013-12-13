@@ -58,7 +58,7 @@ class SettingsManager
             throw new \Exception('Setting type is invalid');
         }
 
-        $em = $this->container->get('doctrine')->getEntityManager();
+        $em = $this->container->get('doctrine')->getManager();
         $setting = new Setting();
         $setting->setName($name);
         $setting->setType($type);
@@ -98,7 +98,7 @@ class SettingsManager
         /**
          * @var \Doctrine\ORM\EntityManager $em
          */
-        $em = $this->container->get('doctrine')->getEntityManager();
+        $em = $this->container->get('doctrine')->getManager();
         /**
          * @var EntityRepository $rsetting
          */
@@ -148,7 +148,7 @@ class SettingsManager
         /**
          * @var \Doctrine\ORM\EntityManager $em
          */
-        $em = $this->container->get('doctrine')->getEntityManager();
+        $em = $this->container->get('doctrine')->getManager();
         /**
          * @var EntityRepository $rsetting
          */
@@ -185,7 +185,7 @@ class SettingsManager
         /**
          * @var \Doctrine\ORM\EntityManager $em
          */
-        $em = $this->container->get('doctrine')->getEntityManager();
+        $em = $this->container->get('doctrine')->getManager();
         /**
          * @var EntityRepository $rsetting
          */
@@ -209,7 +209,7 @@ class SettingsManager
             /**
              * @var \Doctrine\ORM\EntityManager $em
              */
-            $em = $this->container->get('doctrine')->getEntityManager();
+            $em = $this->container->get('doctrine')->getManager();
             /**
              * @var EntityRepository $rsetting
              */

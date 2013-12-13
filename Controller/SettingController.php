@@ -30,7 +30,7 @@ class SettingController extends Controller
         /**
          * @var \Doctrine\ORM\EntityManager $em
          */
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         $entity_name = 'BFOSSettingsManagementBundle:Setting';
 
@@ -72,7 +72,7 @@ class SettingController extends Controller
             throw $this->createNotFoundException($this->get('translator')->trans('Invalid Request'));
         }
 
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         /**
          * @var Setting $entity
@@ -102,7 +102,7 @@ class SettingController extends Controller
      */
     public function editAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('BFOSSettingsManagementBundle:Setting')->find($id);
 
@@ -138,7 +138,7 @@ class SettingController extends Controller
         if(!$request->isXmlHttpRequest()){
             throw $this->createNotFoundException('Invalid request');
         }
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('BFOSSettingsManagementBundle:Setting')->find($id);
         $entities = $em->getRepository('BFOSSettingsManagementBundle:Setting')->findAll();
