@@ -1,7 +1,7 @@
 {
     "name": "brazilianfriendsofsymfony/settings-management-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony BFOSSettingsManagementBundle tweaked",
+    "description": "Symfony BFOSSettingsManagementBundle",
     "keywords": ["settings management","options management"],
     "homepage": "http://www.duocriativa.com.br/bfos",
     "license": "MIT",
@@ -13,10 +13,6 @@
         {
             "name": "BrazilianFriendsOfSymfony Community",
             "homepage": "https://github.com/BrazilianFriendsOfSymfony/BFOSSettingsManagementBundle/contributors"
-        },
-        {
-            "name": "Alex Morales (Al3tz)"
-            "email": "alex.moralesarce@gmail.com"
         }
     ],
     "minimum-stability": "dev",
@@ -24,7 +20,7 @@
         "php": ">=5.3.2"
     },
     "autoload": {
-        "psr-0": { "BFOS\\SettingsManagementBundle": "vendor/aletz/settings-management-bundle" }
+        "psr-0": { "BFOS\\SettingsManagementBundle": "" }
     },
     "target-dir": "BFOS/SettingsManagementBundle"
 }
